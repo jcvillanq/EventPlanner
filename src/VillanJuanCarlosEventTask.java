@@ -6,10 +6,10 @@ public class VillanJuanCarlosEventTask {
     /**
      * Cuando creamos el contrucctor por defecto sera falso completada
      * @param text descipcion de la tarea
-     * @param isCompleted estado de la tarea.
+     * .
      *
      * */
-    public VillanJuanCarlosEventTask(String text, boolean isCompleted) {
+    public VillanJuanCarlosEventTask(String text ) {
         this.text = text;
         this.isCompleted = false;
     }
