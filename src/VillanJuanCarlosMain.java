@@ -81,7 +81,7 @@ public class VillanJuanCarlosMain {
     }
 
 
-
+// add event
     private static  void addEvent() {
         System.out.println("Ingrese el título del evento:");
         String title = input.nextLine();
@@ -105,10 +105,15 @@ public class VillanJuanCarlosMain {
 
         System.out.println("¿Desea añadir tareas al evento? (sí/no)");
         String addTasks = input.nextLine().toLowerCase();
-
+        while (addTasks.equals("sí")) {
+            System.out.println("Ingrese la descripcion de la tarea:");
+            String taskDescription = input.nextLine();
+            event.addTask(new VillanJuanCarlosEventTask(taskDescription));
+            System.out.println("¿Desea añadir otra tarea? (sí/no)");
+            addTasks = input.nextLine().toLowerCase();
+        }
         events.add(event);
-        System.out.println("Evento añadido con éxito.");
-
+        System.out.println("Evento añadido con exito.");
     }
 
     private static void deleteEvent() {
@@ -118,9 +123,9 @@ public class VillanJuanCarlosMain {
         boolean removed = events.removeIf(event -> event.getTitle().equals(title));
 
         if (removed) {
-            System.out.println("Evento eliminado con éxito.");
+            System.out.println("Evento eliminado.");
         } else {
-            System.out.println("No se encontró un evento con ese título.");
+            System.out.println("No se encontro un evento con ese titulo.");
         }
     }
 
@@ -131,8 +136,10 @@ public class VillanJuanCarlosMain {
             events.forEach(System.out::println);
         }
     }
-
+    // esta parte ya no la puede hacer me parecio muy complicada
     private static void  markUnmarkTaskCompletion(){
+
+
         System.out.print("Aplicacion en contruccion/// disculpe las molestias. ");
 
     }
