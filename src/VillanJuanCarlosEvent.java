@@ -1,4 +1,4 @@
-import javax.lang.model.element.NestingKind;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -11,6 +11,7 @@ public class VillanJuanCarlosEvent {
     private LocalDate date;
     private Priority priority;
     private ArrayList<VillanJuanCarlosEventTask> tasks;
+
 
     public enum Priority{
         HIGH, MEDIUM, LOW
@@ -34,7 +35,7 @@ public class VillanJuanCarlosEvent {
          * Usamos count para contar las tareas pero este dato se nos da en long por lo cual lo convertimos a int (int)
          * Usamos tanks.String propiedad que nos permite usar filter.
          * Posteriormente formateamos con los metodos de la clase String.format. %s y %d
-         * Finalmente usamos la variables asociadas con junto la
+         * Finalmente usamos la variables asociadas
          * */
         int tareascompletadas = (int) tasks.stream().filter(VillanJuanCarlosEventTask::isCompleted).count();
         return String.format(
