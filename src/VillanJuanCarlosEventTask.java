@@ -21,4 +21,8 @@ public class VillanJuanCarlosEventTask {
     public String toString(){
         return "Tarea: " + text + " ✏ Completada:  " + (isCompleted ? "SI" : "NO");
     }
+
+    public boolean isCompleted() {
+        return isCompleted;
+    }
 }
